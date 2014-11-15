@@ -42,7 +42,7 @@ define([
     }
 
     ngBootstrap = _.once(ngBootstrap);
-    ng.element('.splash').one('mousedown mousestart', ngBootstrap);
+    ng.element('.splash').one('mousedown touchstart', ngBootstrap);
     
   });
 
