@@ -30,6 +30,11 @@ define([
         templateUrl: '/views/splash.html'
       });
 
+      $stateProvider.state('map', {
+        url: '/map',
+        templateUrl: '/views/map.html'
+      });
+
     }
   ]);
 
