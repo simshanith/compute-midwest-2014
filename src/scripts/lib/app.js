@@ -12,5 +12,32 @@ define([
   ], function(app, _, $, ng, imagesLoaded, controllers, directives, services) {
   'use strict';
 
+  var ngApp = app.ngApp = ng.module('app', [
+    'app.controllers',
+    'app.directives',
+    'ui.router',
+    'ngAnimate'
+  ]);
+
+  ngApp.config([
+    '$stateProvider',
+    '$urlRouterProvider',
+    function ($stateProvider, $urlRouterProvider) {
+      $urlRouterProvider.otherwise("/");
+
+      $stateProvider.state('landing', {
+        url: '/',
+        template: 'Landing'
+      });
+
+    }
+  ]);
+
+  var $document = ng.injector(['ng']).get('$document');
+  $document.ready(function() {
+    console.log('document ready');
+    ng.bootstrap($document.get(0), ['app']);
+  });
+
   return app;
 });
