@@ -1,3 +1,5 @@
-define([], function(){
-
+define([
+  './module'
+], function(services){
+  return services;
 });
