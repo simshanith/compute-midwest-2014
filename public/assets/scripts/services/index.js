@@ -1,5 +1,6 @@
 define([
   './module'
-], function(services){
+], function(services) {
+  'use strict';
   return services;
 });
