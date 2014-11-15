@@ -1,6 +1,7 @@
 extends ../templates/main
 
-append mainContent
-  :markdown
-    ## Index.jade
-  div(ui-view='')
+block mainContent
+  .splash(ng-cloak='')
+    :markdown
+      # Splish Splash
+  section.mainContent(ui-view, ng-cloak='')

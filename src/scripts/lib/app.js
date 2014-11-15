@@ -36,7 +36,14 @@ define([
   var $document = ng.injector(['ng']).get('$document');
   $document.ready(function() {
     console.log('document ready');
-    ng.bootstrap($document.get(0), ['app']);
+
+    function ngBootstrap() {
+      ng.bootstrap($document.get(0), ['app']);
+    }
+
+    ngBootstrap = _.once(ngBootstrap);
+    ng.element('.splash').one('mousedown mousestart', ngBootstrap);
+    
   });
 
   return app;
