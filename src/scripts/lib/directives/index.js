@@ -1,5 +1,6 @@
 define([
-  './module'
+  './module',
+  './map'
 ], function(directives) {
   'use strict';
   return directives;

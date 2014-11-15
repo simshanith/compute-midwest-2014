@@ -29,12 +29,47 @@ define([
 
       $stateProvider.state('landing', {
         url: '/',
-        templateUrl: '/views/splash.html'
+        templateUrl: '/views/login.html'
       });
 
       $stateProvider.state('map', {
         url: '/map',
         templateUrl: '/views/map.html'
+      });
+
+      $stateProvider.state('splash', {
+        url: '/splash',
+        templateUrl: '/views/splash.html'
+      });
+
+      $stateProvider.state('distance', {
+        url: '/distance',
+        templateUrl: '/views/distance.html'
+      });
+
+      $stateProvider.state('categories', {
+        url: '/categories',
+        templateUrl: '/views/categories.html'
+      });
+
+      $stateProvider.state('categories-details', {
+        url: '/categories-details',
+        templateUrl: '/views/categories-details.html'
+      });
+
+      $stateProvider.state('decision', {
+        url: '/decision',
+        templateUrl: '/views/decision.html'
+      });
+
+      $stateProvider.state('location-details', {
+        url: '/location-details',
+        templateUrl: '/views/location-details.html'
+      });
+
+      $stateProvider.state('victory', {
+        url: '/victory',
+        templateUrl: '/views/victory.html'
       });
 
     }
