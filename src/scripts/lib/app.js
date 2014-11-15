@@ -40,6 +40,11 @@ define([
         templateUrl: '/views/splash.html'
       });
 
+      $stateProvider.state('distance', {
+        url: '/distance',
+        templateUrl: '/views/distance.html'
+      });
+
     }
   ]);
 
