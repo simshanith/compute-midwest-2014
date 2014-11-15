@@ -27,7 +27,7 @@ define([
 
       $stateProvider.state('landing', {
         url: '/',
-        template: 'Landing'
+        templateUrl: '/views/splash.html'
       });
 
     }
