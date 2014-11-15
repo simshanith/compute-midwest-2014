@@ -1,0 +1,4 @@
+- if (build === 'dev')
+  +projectScript('vendor/require.js')(data-main!=projectScriptUrl('main'))
+- else
+  +projectScript('main.pkgd.js')
