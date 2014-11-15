@@ -27,12 +27,17 @@ define([
 
       $stateProvider.state('landing', {
         url: '/',
-        templateUrl: '/views/splash.html'
+        templateUrl: '/views/login.html'
       });
 
       $stateProvider.state('map', {
         url: '/map',
         templateUrl: '/views/map.html'
+      });
+
+      $stateProvider.state('splash', {
+        url: '/splash',
+        templateUrl: '/views/splash.html'
       });
 
     }
