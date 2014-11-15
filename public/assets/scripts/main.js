@@ -19,6 +19,7 @@
     youtube: '//www.youtube.com/iframe_api?noext',
     angular: 'vendor/angular.min',
     'angular-ui-router': 'vendor/angular-ui-router.min',
+    'angular-ui-bootstrap': 'vendor/ui-bootstrap-tpls.min',
     'angular-animate': 'vendor/angular-animate.min',
     'console-polyfill': 'vendor/console-polyfill',
     'es5': 'vendor/es5-shim.min',
@@ -38,6 +39,7 @@
       youtube: '//www.youtube.com/iframe_api?noext',
       angular: 'vendor/angular',
       'angular-ui-router': 'vendor/angular-ui-router',
+      'angular-ui-bootstrap': 'vendor/ui-bootstrap-tpls',
       'angular-animate': 'vendor/angular-animate',
       'console-polyfill': 'vendor/console-polyfill',
       'es5': 'vendor/es5-shim',
@@ -72,6 +74,10 @@
     },
     'angular-ui-router': {
       deps: ['angular'],
+      exports: 'angular'
+    },
+    'angular-ui-bootstrap': {
+      deps: ['angular', 'jquery'],
       exports: 'angular'
     },
     'angular-animate': {

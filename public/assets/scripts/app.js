@@ -8,6 +8,7 @@ define([
   'directives',
   'services',
   'angular-ui-router',
+  'angular-ui-bootstrap',
   'angular-animate'
   ], function(app, _, $, ng, imagesLoaded, controllers, directives, services) {
   'use strict';
@@ -16,6 +17,7 @@ define([
     'app.controllers',
     'app.directives',
     'ui.router',
+    'ui.bootstrap',
     'ngAnimate'
   ]);
 
