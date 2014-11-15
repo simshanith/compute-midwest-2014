@@ -7,3 +7,7 @@ mixin includeMarkdown(file)
 mixin includeJSON(file)
   script(type="application/json")&attributes(attributes)
     != includeJSON(file)
+
+mixin ngTemplate(template)
+  script(type="text/ng-template", id!=template+'.html')
+    !=render(path.join(paths.htdocs, template+'.jade'))

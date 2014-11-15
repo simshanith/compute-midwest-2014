@@ -154,3 +154,18 @@ bower:
       cwd: bower_components/pure/
       src: ["*.css", ".md"]
       dest: <%= copy.bower.options.stylesDir %>/pure/
+    -
+      expand: true
+      cwd: bower_components/angular-bootstrap
+      src: ['*.js']
+      dest: <%= copy.bower.options.scriptsDir %>/
+    -
+      expand: true
+      cwd: bower_components/bootstrap/dist/css/
+      src: ['*']
+      dest: <%= copy.bower.options.stylesDir %>/bootstrap/
+    -
+      expand: true
+      cwd: bower_components/bootstrap/dist/js/
+      src: ['bootstrap*.js']
+      dest: <%= copy.bower.options.scriptsDir %>/
