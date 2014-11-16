@@ -1,4 +1,7 @@
 .location-details(ui-sref="victory")
-  .location-details__wrapper(ng-if="location", style="background-color: {{location.color}}")
+  .location-details__wrapper(ng-if="location", style="background-color: {{location.color}}; background-image: url({{location.image}});")
+    .location-details__mask
     .location-details__content
-      | {{location.name}}!
+      h3 {{location.name}}!
+      .location-details__stats
+        span.location-details__peeps {{location.peeps}}

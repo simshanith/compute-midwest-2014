@@ -14,6 +14,17 @@
     right 0
     bottom 0
     text-align center
+    font-size 3.2em
+    font-weight 500
+    line-height 1.2
+    background-repeat no-repeat
+    background-size cover
+    background-position center
+    color white
+
+    h3
+      font-size 1.17em
+      margin 0
 
     &:before
       display inline-block
@@ -24,5 +35,28 @@
   &__content
     display inline-block
     vertical-align middle
-    font-size 7em
+    font-size 1em
     user-select none
+    position relative
+
+  &__stats
+    display block
+    font-size 0.5em
+    width 220px
+    height 50px
+    background imageUrl('decision/decision-stats.png') center center no-repeat
+    background-size contain
+    position relative
+
+  &__peeps
+    position absolute
+    top 12px
+    left 25px
+
+  &__mask
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    background-image radial-gradient(at center, rgba(0,0,0,0.33), rgba(0,0,0,0) 150%)
