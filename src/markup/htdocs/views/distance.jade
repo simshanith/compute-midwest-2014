@@ -13,20 +13,25 @@
       tilt="90"
       map-type-id="TERRAIN").squireMap
     .map-copy
-      h2 Starting From
-      h1 Overland Park
+      h1 Starting From
+      h5 Overland Park
       a(href="#") Change
-  
-  h1 How Far Would You Like Travel
-  .slider(distance='')
-    input.rangeinput.bar(type='range', name='sliderBar',min='0',max='100')
-    output(for="sliderBar",onforminput="value = sliderBar.value")
-  h1 Who Are You With
-  .friends.pure-g
-    .friend.josh.pure-u-1-5
-    .friend.add.pure-u-1-5
-    .friend.blank
-    .friend.blank
-    .friend.blank
+  .slider-pod
+    h1 How Far Would You Like Travel
+    .slider(distance='')
+      span.before 5 mi
+      input.rangeinput.bar(type='range', name='sliderBar',min='5',max='40')
+      span.after 40+ mi
+      //output(for="sliderBar",onforminput="value = sliderBar.value")
+  .friend-pod
+    h1 Who Are You With
+    .friends.pure-g
+      .friend.josh.pure-u-1-5
+        img.pure-img(src="/assets/images/icons/josh-friend.png")
+      .friend.add.pure-u-1-5
+        img.pure-img(src="/assets/images/icons/empty-friend.png")
+      .friend.blank
+      .friend.blank
+      .friend.blank
   .pure-button(ui-sref="categories")
     h1 next
