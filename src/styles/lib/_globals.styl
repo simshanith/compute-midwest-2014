@@ -44,53 +44,25 @@ border-radius(n)
   animation: rotateRoomLeftOut .8s both ease
 }
 
-// Animation
-.pt-page-rotateRoomLeftOut {
-  transform-origin 100% 50%
-  animation: rotateRoomLeftOut .8s both ease
-}
-.pt-page-rotateRoomLeftIn {
-  -webkit-transform-origin 0% 50%
-  transform-origin 0% 50%
-  -webkit-animation: rotateRoomLeftIn .8s both ease
-  animation: rotateRoomLeftIn .8s both ease
-}
-.pt-page-rotateRoomRightOut {
-  -webkit-transform-origin 0% 50%
-  transform-origin 0% 50%
-  -webkit-animation: rotateRoomRightOut .8s both ease
-  animation: rotateRoomRightOut .8s both ease
-}
-.pt-page-rotateRoomRightIn {
-  -webkit-transform-origin 100% 50%
-  transform-origin 100% 50%
-  -webkit-animation: rotateRoomRightIn .8s both ease
-  animation: rotateRoomRightIn .8s both ease
-}
-.pt-page-rotateRoomTopOut {
-  -webkit-transform-origin 50% 100%
-  transform-origin 50% 100%
-  -webkit-animation: rotateRoomTopOut .8s both ease
-  animation: rotateRoomTopOut .8s both ease
-}
-.pt-page-rotateRoomTopIn {
-  -webkit-transform-origin 50% 0%
-  transform-origin 50% 0%
-  -webkit-animation: rotateRoomTopIn .8s both ease
-  animation: rotateRoomTopIn .8s both ease
-}
-.pt-page-rotateRoomBottomOut {
-  -webkit-transform-origin 50% 0%
-  transform-origin 50% 0%
-  -webkit-animation: rotateRoomBottomOut .8s both ease
-  animation: rotateRoomBottomOut .8s both ease
-}
-.pt-page-rotateRoomBottomIn {
-  -webkit-transform-origin 50% 100%
-  transform-origin 50% 100%
-  -webkit-animation: rotateRoomBottomIn .8s both ease
-  animation: rotateRoomBottomIn .8s both ease
-}
+map.squireMap
+  width 100%
+  height 100%
+  margin 0
+  z-index 2
+  
+  &:before
+    content ''
+    position absolute
+    left 0
+    top 0
+    height 100%
+    width 100%
+    background-color cRed
+    opacity 0.75
+    float left
+    z-index 3
+    pointer-events none
+    
 /* room walls */
 
 @-webkit-keyframes rotateRoomLeftOut {
@@ -156,5 +128,6 @@ border-radius(n)
 @keyframes rotateRoomBottomIn {
   from { opacity: .3; -webkit-transform: translateY(-100%) rotateX(-90deg); transform: translateY(-100%) rotateX(-90deg); }
 }
+
 futuraStack = "futura-pt", sansStack
 

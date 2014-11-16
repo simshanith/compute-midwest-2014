@@ -29,7 +29,8 @@
     'jquery.transit': 'vendor/jquery.transit',
     'jquery.mousewheel': 'vendor/jquery.mousewheel.min',
     'imagesloaded': 'vendor/imagesloaded.pkgd.min',
-    'hammer': 'vendor/hammer.min'
+    'hammer': 'vendor/hammer.min',
+    'ngmap': 'vendor/ng-map.min'
   };
 
   if ( app.builds.isDev ) {
@@ -37,6 +38,7 @@
     app.requirejs.paths = {
       facebook: '//connect.facebook.com/en_US/sdk/debug',
       youtube: '//www.youtube.com/iframe_api?noext',
+        googlemaps: "//maps.google.com/maps/api/js?noext",
       angular: 'vendor/angular',
       'angular-ui-router': 'vendor/angular-ui-router',
       'angular-ui-bootstrap': 'vendor/ui-bootstrap-tpls',
@@ -49,7 +51,9 @@
       'jquery.easing': 'vendor/jquery.easing',
       'jquery.mousewheel': 'vendor/jquery.mousewheel',
       'imagesloaded': 'vendor/imagesloaded.pkgd',
-      'hammer': 'vendor/hammer'
+      'hammer': 'vendor/hammer',
+      'ngmap': 'vendor/ng-map'
+
     };
   }
 
@@ -95,6 +99,10 @@
     'imagesloaded': {
       deps: ['jquery'],
       exports: 'imagesLoaded'
+    },
+    ngmap: {
+      deps: ['angular'],
+      exports: 'angular'
     }
 
   };
