@@ -3,7 +3,8 @@ define([
   './map',
   './decider',
   './distance',
-  './popDirective'
+  './popDirective',
+  './scroller'
 ], function(directives) {
   'use strict';
   return directives;
