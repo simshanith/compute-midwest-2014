@@ -1,4 +1,4 @@
-define(['./module', 'hammer', 'verge'], function(directives, Hammer, verge) {
+define(['./module', 'jquery', 'hammer', 'verge'], function(directives, $, Hammer, verge) {
   'use strict';
   directives.directive('decider', function() {
     return {
@@ -25,6 +25,7 @@ define(['./module', 'hammer', 'verge'], function(directives, Hammer, verge) {
         }
 
         var draggingClass = 'decision__option--dragging';
+        var chosenClass = 'decision__option--chosen';
 
         hammertime.on('panstart', function(ev){
           var $option = getOption(ev.target);
@@ -47,7 +48,6 @@ define(['./module', 'hammer', 'verge'], function(directives, Hammer, verge) {
 
           var optionHeight = verge.viewportH() / 2;
           var isFirst = $option.is(optionA);
-          var direction = isFirst ? Hammer.DIRECTION_DOWN : Hammer.DIRECTION_UP;
 
 
           var initHeightPercent = 50;
@@ -58,9 +58,6 @@ define(['./module', 'hammer', 'verge'], function(directives, Hammer, verge) {
           var minTopPercent = 0;
           var maxTopPercent = isFirst ? 0 : 50;
 
-          //console.log(ev);
-
-          var rightWay = direction === ev.direction;
           var delta = ev.deltaY / optionHeight * 100 * (isFirst ? 1 : -1);
 
           var top = Math.max(initTopPercent - delta, minTopPercent);
@@ -74,6 +71,8 @@ define(['./module', 'hammer', 'verge'], function(directives, Hammer, verge) {
           });
 
           if( top === minTopPercent && height === maxHeightPercent) {
+            $options.removeClass(draggingClass);
+            $option.addClass(chosenClass);
             hammertime.destroy();
           }
 
