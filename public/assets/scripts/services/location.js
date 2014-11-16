@@ -9,13 +9,13 @@ define(['./module', 'underscore'], function (services, _) {
         name: 'Beer Kitchen',
         color: 'aqua',
         id: 'a',
-        image: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='
+        image: 'https://trello-attachments.s3.amazonaws.com/54685ab4cd2520bf7604ed1f/640x1146/51886d7326db79140640eeeffd2b5250/BeerKitchen-image.jpg'
       },
       {
         name: 'Ça Va',
         color: 'orangered',
         id: 'b',
-        image: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='
+        image: 'https://trello-attachments.s3.amazonaws.com/54685ab4cd2520bf7604ed1f/640x1146/24b03548b457375a1b50dc1613b01f13/CaVa-image.jpg'
       },
       {
         name: 'Port Fonda',
