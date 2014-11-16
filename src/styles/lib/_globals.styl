@@ -25,6 +25,7 @@ cRed = #D0471F
 cTeal = #339BA1
 cBlack = #121210
 cWhite = #FFFFFC
+cGray = #5D5D5D
 cBlanket = rgba(0,0,0,0.3)
 
 //Sizing
@@ -43,6 +44,30 @@ border-radius(n)
   transform-origin 100% 50%
   animation: rotateRoomLeftOut .8s both ease
 }
+
+.splash-wrapper {
+  animation: splashAnimation 2s both ease
+}
+
+map.squireMap
+  width 100%
+  height 100%
+  margin 0
+  z-index 2
+  
+  &:before
+    content ''
+    position absolute
+    left 0
+    top 0
+    height 100%
+    width 100%
+    background-color cRed
+    opacity 0.75
+    float left
+    z-index 3
+    pointer-events none
+
     
 /* room walls */
 
@@ -108,6 +133,12 @@ border-radius(n)
 }
 @keyframes rotateRoomBottomIn {
   from { opacity: .3; -webkit-transform: translateY(-100%) rotateX(-90deg); transform: translateY(-100%) rotateX(-90deg); }
+}
+
+// Splash Animation
+@keyframes splashAnimation {
+  from { opacity: 0;}
+  to { opacity: 1; transform: translateY(-2%);}
 }
 
 futuraStack = "futura-pt", sansStack
