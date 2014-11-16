@@ -1,3 +1,16 @@
-.where-from 
+.where-from
+  .map
+  h1 How Far Would You Like Travel
+  .slider
+    input.rangeinput.bar(type='range', value='50', onchange='rangevalue.value=value')
+    span.highlight
+    output#rangevalue 50
+  h1 Who Are You With
+  .friends.pure-g
+    .friend.josh.pure-u-1-5
+    .friend.add.pure-u-1-5
+    .friend.blank
+    .friend.blank
+    .friend.blank
   .pure-button(ui-sref="categories")
-    h1 are you from kansas?
+    h1 next
