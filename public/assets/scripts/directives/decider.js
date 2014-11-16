@@ -25,6 +25,7 @@ define(['./module', 'jquery', 'hammer', 'verge'], function(directives, $, Hammer
         }
 
         var draggingClass = 'decision__option--dragging';
+        var chosenClass = 'decision__option--chosen';
 
         hammertime.on('panstart', function(ev){
           var $option = getOption(ev.target);
@@ -70,6 +71,8 @@ define(['./module', 'jquery', 'hammer', 'verge'], function(directives, $, Hammer
           });
 
           if( top === minTopPercent && height === maxHeightPercent) {
+            $options.removeClass(draggingClass);
+            $option.addClass(chosenClass);
             hammertime.destroy();
           }
 
