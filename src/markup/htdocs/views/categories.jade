@@ -1,7 +1,8 @@
-.categories(ui-sref="categories-details")
+.categories
   accordion(close-others=true)
     accordion-group(is-open="isOpen")
       accordion-heading
         | Whoa
         i.pull-right.glyphicon(ng-class="{'glyphicon-chevron-down': isOpen, 'glyphicon-chevron-right': !isOpen}")
-      | Content
+      a(ui-sref="categories-details")
+        | Content
