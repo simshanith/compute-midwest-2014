@@ -25,6 +25,7 @@ cRed = #D0471F
 cTeal = #339BA1
 cBlack = #121210
 cWhite = #FFFFFC
+cGray = #5D5D5D
 cBlanket = rgba(0,0,0,0.3)
 
 //Sizing
@@ -42,6 +43,10 @@ border-radius(n)
 .mainContent.ng-leave {
   transform-origin 100% 50%
   animation: rotateRoomLeftOut .8s both ease
+}
+
+.splash-wrapper {
+  animation: splashAnimation 2s both ease
 }
 
 map.squireMap
@@ -127,6 +132,12 @@ map.squireMap
 }
 @keyframes rotateRoomBottomIn {
   from { opacity: .3; -webkit-transform: translateY(-100%) rotateX(-90deg); transform: translateY(-100%) rotateX(-90deg); }
+}
+
+// Splash Animation
+@keyframes splashAnimation {
+  from { opacity: 0;}
+  to { opacity: 1; transform: translateY(-2%);}
 }
 
 futuraStack = "futura-pt", sansStack
