@@ -1,10 +1,25 @@
-form.pure-u
-  input#clubs(type='radio', name='fancy', autofocus='', value='clubs')
-  input#hearts(type='radio', name='fancy', value='hearts')
-  input#spades(type='radio', name='fancy', value='spades')
-  input#diamonds(type='radio', name='fancy', value='diamonds')
-  label(for='clubs') YOU
-  label(for='hearts') WIN
-  label(for='spades') THE
-  label(for='diamonds') GAME
-  .keys Use left and right keys to navigate
+.pure-g.victory-wrap
+  .pure-u.victory-top
+    h1 Welcome to BlueStem!
+
+  form.pure-u.victory-mid
+    input#clubs(type='radio', name='fancy', autofocus='', value='clubs')
+    input#hearts(type='radio', name='fancy', value='hearts')
+    input#spades(type='radio', name='fancy', value='spades')
+    input#diamonds(type='radio', name='fancy', value='diamonds')
+    label(for='clubs') 
+      img.pure-img(src="/assets/images/icons/josh-friend.png") 
+      <strong>PRO TIP:</strong> Megan's Desserts are works of art.
+    label(for='hearts') 
+      img.pure-img(src="/assets/images/icons/josh-friend.png") 
+      <strong>PRO TIP:</strong> Megan's Desserts are works of art.
+    label(for='spades')
+      img.pure-img(src="/assets/images/icons/josh-friend.png") 
+      <strong>PRO TIP:</strong> Megan's Desserts are works of art.
+    label(for='diamonds')
+      img(src="/assets/images/icons/josh-friend.png").pure-img 
+      <strong>PRO TIP:</strong> Megan's Desserts are works of art.
+    .keys Use left and right keys to navigate
+    button.pure-button.victory-button.vTip Add a Tip
+    button.pure-button.victory-button.vStop Add One More Stop
+    button.pure-button.victory-button.vFin FINISH MY ADVENTURE
