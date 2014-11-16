@@ -29,7 +29,8 @@
     'jquery.transit': 'vendor/jquery.transit',
     'jquery.mousewheel': 'vendor/jquery.mousewheel.min',
     'imagesloaded': 'vendor/imagesloaded.pkgd.min',
-    'hammer': 'vendor/hammer.min'
+    'hammer': 'vendor/hammer.min',
+    verge: 'vendor/verge.min'
   };
 
   if ( app.builds.isDev ) {
@@ -49,7 +50,8 @@
       'jquery.easing': 'vendor/jquery.easing',
       'jquery.mousewheel': 'vendor/jquery.mousewheel',
       'imagesloaded': 'vendor/imagesloaded.pkgd',
-      'hammer': 'vendor/hammer'
+      'hammer': 'vendor/hammer',
+      verge: 'vendor/verge'
     };
   }
 
@@ -95,6 +97,9 @@
     'imagesloaded': {
       deps: ['jquery'],
       exports: 'imagesLoaded'
+    },
+    verge: {
+      exports: 'verge'
     }
 
   };

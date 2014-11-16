@@ -169,3 +169,9 @@ bower:
       cwd: bower_components/bootstrap/dist/js/
       src: ['bootstrap*.js']
       dest: <%= copy.bower.options.scriptsDir %>/
+    -
+      expand: true
+      cwd: bower_components/verge/
+      src: ["verge*.js"]
+      dest: <%= copy.bower.options.scriptsDir %>/
+

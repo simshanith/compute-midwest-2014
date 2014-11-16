@@ -33,6 +33,7 @@ options:
     imagesloaded: "vendor/imagesloaded.pkgd.min"
     console-polyfill: "vendor/console-polyfill"
     hammer: 'vendor/hammer.min'
+    verge: 'vendor/verge.min'
   enforceDefine: true
   name: main
   baseUrl: "<%= paths.build %>/scripts/"
@@ -89,6 +90,8 @@ options:
     mCustomScrollbar:
       deps: ["jquery"]
       exports: jQuery
+    verge:
+      exports: verge
 
 main:
   options:
