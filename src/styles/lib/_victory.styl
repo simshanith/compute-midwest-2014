@@ -1,19 +1,44 @@
+.victory-wrap
+  background-color cBlack
+  color cTan
+  width 100%
+  height 100%
+.victory-top
+  height 25vh
+  text-align center
+  width 100%
+  margin-top 6.25vh
+.victory-mid
+  height 35vh
+  position absolute
+  left 0
+  top 25vh
+.victory-bottom
+  height 40vh
+  background-color cBlack
+  position relative
+  top 0
+  left 0
+
 label
-  background cTeal
-  color cWhite
+  background cTan
+  color cBlack
   transition transform 400ms ease-out
   display inline-block
-  min-height 100%
   width 100vw
-  height 100vh
+  height 35vh
   position relative
   z-index 1
   text-align center
-  line-height 100vh
+  line-height 35vh
   background-size cover
-  font-size 20em
-  letter-spacing -0.06em
-  font-weight 200
+  font-size 2em
+  
+  img.pure-img
+    display inline
+    max-width 75px
+    margin-right 1em
+  
   &:before
     content ""
     right 100.25%
@@ -73,7 +98,7 @@ input:nth-of-type(4):checked ~ label:nth-of-type(4)
 
 label[for="diamonds"],
 label[for="hearts"]
-  background cRed
+  background cTan
 
 label:before,
 label:after
@@ -89,3 +114,22 @@ label:after
   top 50%
   transform translate3d(0, -50%, 0)
   cursor pointer
+  
+button.victory-button
+  width 50vh
+  height 4em
+  margin 1em auto
+  display block
+  clear both
+  font-size 1.4em
+  color cTan
+  text-transform uppercase
+  
+.vTip
+  background-color cRed
+.vStop
+  background-color cTeal
+.vFin
+  background-color cBlack
+  
+
