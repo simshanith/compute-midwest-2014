@@ -73,6 +73,7 @@ define([
       });
 
       $stateProvider.state('victory', {
+        controller: 'VictoryCtrl',
         url: '/victory',
         templateUrl: '/views/victory.html'
       });

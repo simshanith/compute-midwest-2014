@@ -35,7 +35,7 @@ define(['./module', 'underscore'], function (services, _) {
       },
       
       {
-        name: 'Blue Stem',
+        name: 'Bluestem',
         color: 'aqua',
         id: 'e',
         image: 'https://trello-attachments.s3.amazonaws.com/54685ab4cd2520bf7604ed1f/640x1146/e41e4d385f4d1f43dd707ce05eea2371/BlueStem-Image.jpg',

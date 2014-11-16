@@ -2,7 +2,8 @@ define([
   './module',
   './location-details',
   './decision',
-  './map'
+  './map',
+  './victory'
 ], function(controllers){
   'use strict';
   return controllers;

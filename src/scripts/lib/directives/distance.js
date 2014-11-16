@@ -1,5 +1,7 @@
 define(['./module'],
   function(directives){
+    'use strict';
+
     directives.directive('distance', function() {
       return {
         restrict: 'A',

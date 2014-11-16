@@ -35,6 +35,14 @@ define(['angular', './module', 'underscore'], function(angular, controllers, _) 
 
             locality = locality && locality.long_name;
 
+            if( !locality ) {
+              //console.log(result);
+              locality = _.find(addressComponents, function(component) {
+                return _.contains(component.types, 'sublocality');
+              });
+              locality = locality && locality.long_name;
+            }
+
             console.log(locality);
 
             $scope.$apply(function() {
