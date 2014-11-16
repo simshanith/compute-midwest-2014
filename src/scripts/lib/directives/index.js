@@ -2,7 +2,8 @@ define([
   './module',
   './map',
   './decider',
-  './distance'
+  './distance',
+  './popDirective'
 ], function(directives) {
   'use strict';
   return directives;
