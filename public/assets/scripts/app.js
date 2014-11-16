@@ -77,6 +77,11 @@ define([
         templateUrl: '/views/victory.html'
       });
 
+      $stateProvider.state('adventure-finish', {
+        url: '/victory',
+        templateUrl: '/views/adventure-finish.html'
+      });
+
     }
   ]);
 
