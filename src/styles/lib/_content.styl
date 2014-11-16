@@ -20,6 +20,17 @@
 }
 
 
+.icon.ng-enter {
+  transform-origin 0% 50%
+  animation: rotateRoomLeftIn 8s both ease
+  z-index: 999;
+}
+
+.icon.ng-leave {
+  transform-origin 100% 50%
+  animation: rotateRoomLeftOut 8s both ease
+}
+
 .mainContent.ui-view-decision.ng-leave
   animation none
   opacity 1
