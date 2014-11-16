@@ -1,7 +1,8 @@
 define([
   './module',
   './location-details',
-  './decision'
+  './decision',
+  './map'
 ], function(controllers){
   'use strict';
   return controllers;
