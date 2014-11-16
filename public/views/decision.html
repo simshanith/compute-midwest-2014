@@ -1,15 +1,1 @@
-
-<div decider="" class="decision">
-  <ul class="decision__options">
-    <li ng-repeat="location in locations" repeat-done="bindHammer()" style="background-color: {{location.color}}; background-image: url({{location.image}});" class="decision__option"><a ui-sref="location-details" class="decision__select"></a>
-      <div class="decision__mask"></div>
-      <div ng-class="dragging" class="decision__overlay"></div>
-      <div class="decision__content">
-        <h3>{{location.name}}</h3>
-        <div class="decision__stats"><span class="decision__peeps">{{location.peeps}}</span></div>
-      </div>
-    </li>
-  </ul>
-  <div ng-class="dragging" class="decision__overview"><img src="/assets/images/icons/wine-glass.png"/><span class="cta">Grab a drink at...</span>
-  </div>
-</div>
+<div decider="" class="decision"><ul class="decision__options"><li ng-repeat="location in locations" repeat-done="bindHammer()" style="background-color: {{location.color}}; background-image: url({{location.image}});" class="decision__option"><a ui-sref="location-details" class="decision__select"></a><div class="decision__mask"></div><div ng-class="dragging" class="decision__overlay"></div><div class="decision__content"><h3>{{location.name}}</h3><div class="decision__stats"><span class="decision__peeps">{{location.peeps}}</span></div></div></li></ul><div ng-class="dragging" class="decision__overview"><img src="/assets/images/icons/wine-glass.png"/><span class="cta">Grab a drink at...</span></div></div>
