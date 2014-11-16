@@ -17,3 +17,144 @@ imageUrl(image)
 
 // Font Family Stacks
 sansStack = Helvetica, Arial, sans-serif
+
+// Colors
+cPurple = #372B5F
+cTan = #E2D982
+cRed = #D0471F
+cTeal = #339BA1
+cBlack = #121210
+cWhite = #FFFFFC
+cBlanket = rgba(0,0,0,0.3)
+
+//Sizing
+border-radius(n)
+  border-radius n
+  
+//Animation Structure
+
+.mainContent.ng-enter {
+  transform-origin 0% 50%
+  animation: rotateRoomLeftIn .8s both ease
+  z-index: 999;
+}
+
+.mainContent.ng-leave {
+  transform-origin 100% 50%
+  animation: rotateRoomLeftOut .8s both ease
+}
+
+// Animation
+.pt-page-rotateRoomLeftOut {
+  transform-origin 100% 50%
+  animation: rotateRoomLeftOut .8s both ease
+}
+.pt-page-rotateRoomLeftIn {
+  -webkit-transform-origin 0% 50%
+  transform-origin 0% 50%
+  -webkit-animation: rotateRoomLeftIn .8s both ease
+  animation: rotateRoomLeftIn .8s both ease
+}
+.pt-page-rotateRoomRightOut {
+  -webkit-transform-origin 0% 50%
+  transform-origin 0% 50%
+  -webkit-animation: rotateRoomRightOut .8s both ease
+  animation: rotateRoomRightOut .8s both ease
+}
+.pt-page-rotateRoomRightIn {
+  -webkit-transform-origin 100% 50%
+  transform-origin 100% 50%
+  -webkit-animation: rotateRoomRightIn .8s both ease
+  animation: rotateRoomRightIn .8s both ease
+}
+.pt-page-rotateRoomTopOut {
+  -webkit-transform-origin 50% 100%
+  transform-origin 50% 100%
+  -webkit-animation: rotateRoomTopOut .8s both ease
+  animation: rotateRoomTopOut .8s both ease
+}
+.pt-page-rotateRoomTopIn {
+  -webkit-transform-origin 50% 0%
+  transform-origin 50% 0%
+  -webkit-animation: rotateRoomTopIn .8s both ease
+  animation: rotateRoomTopIn .8s both ease
+}
+.pt-page-rotateRoomBottomOut {
+  -webkit-transform-origin 50% 0%
+  transform-origin 50% 0%
+  -webkit-animation: rotateRoomBottomOut .8s both ease
+  animation: rotateRoomBottomOut .8s both ease
+}
+.pt-page-rotateRoomBottomIn {
+  -webkit-transform-origin 50% 100%
+  transform-origin 50% 100%
+  -webkit-animation: rotateRoomBottomIn .8s both ease
+  animation: rotateRoomBottomIn .8s both ease
+}
+/* room walls */
+
+@-webkit-keyframes rotateRoomLeftOut {
+  from { }
+  to { opacity: .3; -webkit-transform: translateX(-100%) rotateY(90deg); }
+}
+@keyframes rotateRoomLeftOut {
+  from { }
+  to { opacity: .3; -webkit-transform: translateX(-100%) rotateY(90deg); transform: translateX(-100%) rotateY(90deg); }
+}
+
+@-webkit-keyframes rotateRoomLeftIn {
+  from { opacity: .3; -webkit-transform: translateX(100%) rotateY(-90deg); }
+}
+@keyframes rotateRoomLeftIn {
+  from { opacity: .3; -webkit-transform: translateX(100%) rotateY(-90deg); transform: translateX(100%) rotateY(-90deg); }
+}
+
+@-webkit-keyframes rotateRoomRightOut {
+  from { }
+  to { opacity: .3; -webkit-transform: translateX(100%) rotateY(-90deg); }
+}
+@keyframes rotateRoomRightOut {
+  from { }
+  to { opacity: .3; -webkit-transform: translateX(100%) rotateY(-90deg); transform: translateX(100%) rotateY(-90deg); }
+}
+
+@-webkit-keyframes rotateRoomRightIn {
+  from { opacity: .3; -webkit-transform: translateX(-100%) rotateY(90deg); }
+}
+@keyframes rotateRoomRightIn {
+  from { opacity: .3; -webkit-transform: translateX(-100%) rotateY(90deg); transform: translateX(-100%) rotateY(90deg); }
+}
+
+@-webkit-keyframes rotateRoomTopOut {
+  from { }
+  to { opacity: .3; -webkit-transform: translateY(-100%) rotateX(-90deg); }
+}
+@keyframes rotateRoomTopOut {
+  from { }
+  to { opacity: .3; -webkit-transform: translateY(-100%) rotateX(-90deg); transform: translateY(-100%) rotateX(-90deg); }
+}
+
+@-webkit-keyframes rotateRoomTopIn {
+  from { opacity: .3; -webkit-transform: translateY(100%) rotateX(90deg); }
+}
+@keyframes rotateRoomTopIn {
+  from { opacity: .3; -webkit-transform: translateY(100%) rotateX(90deg); transform: translateY(100%) rotateX(90deg); }
+}
+
+@-webkit-keyframes rotateRoomBottomOut {
+  from { }
+  to { opacity: .3; -webkit-transform: translateY(100%) rotateX(90deg); }
+}
+@keyframes rotateRoomBottomOut {
+  from { }
+  to { opacity: .3; -webkit-transform: translateY(100%) rotateX(90deg); transform: translateY(100%) rotateX(90deg); }
+}
+
+@-webkit-keyframes rotateRoomBottomIn {
+  from { opacity: .3; -webkit-transform: translateY(-100%) rotateX(-90deg); }
+}
+@keyframes rotateRoomBottomIn {
+  from { opacity: .3; -webkit-transform: translateY(-100%) rotateX(-90deg); transform: translateY(-100%) rotateX(-90deg); }
+}
+futuraStack = "futura-pt", sansStack
+
