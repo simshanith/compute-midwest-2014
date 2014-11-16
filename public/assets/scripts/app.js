@@ -32,7 +32,7 @@ define([
 
       $stateProvider.state('landing', {
         url: '/',
-        templateUrl: '/views/login.html'
+        templateUrl: '/views/splash.html'
       });
 
       $stateProvider.state('map', {
