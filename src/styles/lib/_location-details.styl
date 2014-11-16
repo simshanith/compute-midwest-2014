@@ -1,0 +1,28 @@
+@require _globals
+
+.location-details
+  position: absolute
+  top 0
+  left 0
+  bottom 0
+  right 0
+
+  &__wrapper
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    text-align center
+
+    &:before
+      display inline-block
+      content ''
+      vertical-align middle
+      height 100%
+
+  &__content
+    display inline-block
+    vertical-align middle
+    font-size 7em
+    user-select none

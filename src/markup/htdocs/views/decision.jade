@@ -1,5 +1,9 @@
 .decision(decider='')
-  .decision__option
-    .decision__content A
-  .decision__option
-    .decision__content B
+  ul.decision__options
+    li.decision__option(ng-repeat="location in locations", repeat-done="bindHammer()", style="background-color: {{location.color}}")
+      a(ui-sref="location-details").decision__select
+      .decision__overlay(ng-class='dragging')
+      .decision__content {{location.name}}
+
+  .decision__overview(ng-class='dragging')
+    | Grab a drink at...
