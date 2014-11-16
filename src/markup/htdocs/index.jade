@@ -1,6 +1,9 @@
 extends ../templates/main
 
 block mainContent
-  .pure-g.splash(ng-cloak='')
-    .pure-1.splash-wrapper
+  .intro-container(ng-cloak='')
+    .dark-half
+    .pure-g.splash
+      .pure-1.splash-wrapper
+    .light-half
   section.mainContent(ui-view, ng-cloak='', ng-class='className')
