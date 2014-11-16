@@ -6,6 +6,7 @@ options:
     angular: vendor/angular.min
     angular-ui-router: "vendor/angular-ui-router.min"
     angular-ui-bootstrap: "vendor/ui-bootstrap-tpls.min"
+    ngmap: 'vendor/ng-map.min'
     angular-animate: "vendor/angular-animate.min"
     underscore: vendor/lodash.underscore.min
     underscore.string: "vendor/underscore.string.min"
@@ -81,6 +82,9 @@ options:
     jquery.mousewheel:
       deps: ["jquery"]
       exports: jQuery
+    ngmap:
+      deps: ["angular"]
+      exports: angular
     #jquery.scrollTo:
     #  deps: ["jquery"]
     #  exports: jQuery

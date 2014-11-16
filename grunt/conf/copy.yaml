@@ -169,3 +169,8 @@ bower:
       cwd: bower_components/bootstrap/dist/js/
       src: ['bootstrap*.js']
       dest: <%= copy.bower.options.scriptsDir %>/
+    -
+      expand: true
+      cwd: bower_components/ngmap/build/scripts/
+      src: ['ng-map*.js']
+      dest: <%= copy.bower.options.scriptsDir %>/

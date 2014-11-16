@@ -9,7 +9,8 @@ define([
   'services',
   'angular-ui-router',
   'angular-ui-bootstrap',
-  'angular-animate'
+  'angular-animate',
+  'ngmap'
   ], function(app, _, $, ng, imagesLoaded, controllers, directives, services) {
   'use strict';
 
@@ -18,7 +19,8 @@ define([
     'app.directives',
     'ui.router',
     'ui.bootstrap',
-    'ngAnimate'
+    'ngAnimate',
+    'ngMap'
   ]);
 
   ngApp.config([
