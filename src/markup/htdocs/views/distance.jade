@@ -1,5 +1,18 @@
 .where-from
-  .map
+  .map-container(ng-controller='mapcontroller')
+    map(zoom="16" center="[39.0954135, -94.577938]" 
+      disable-default-u-i="true"
+      disable-double-click-zoom="true"
+      draggable="false"
+      draggable-cursor="none"
+      dragging-cursor="move"
+      keyboard-shortcuts="false"
+      max-zoom="12"
+      min-zoom="8"
+      tilt="90"
+      map-type-id="TERRAIN").squireMap
+  
+  h1.derp HEY YALL
   h1 How Far Would You Like Travel
   .slider(distance='')
     input.rangeinput.bar(type='range', name='sliderBar',min='0',max='100')

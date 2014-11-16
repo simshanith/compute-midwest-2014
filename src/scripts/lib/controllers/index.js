@@ -1,5 +1,6 @@
 define([
-  './module'
+  './module',
+  './map'
 ], function(controllers){
   'use strict';
   return controllers;

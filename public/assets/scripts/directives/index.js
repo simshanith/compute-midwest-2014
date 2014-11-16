@@ -1,7 +1,8 @@
 define([
   './module',
   './map',
-  './distance'
+  './distance',
+  './gMap'
 ], function(directives) {
   'use strict';
   return directives;
