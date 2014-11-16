@@ -102,7 +102,7 @@
     user-select none
 
     .pure-button
-      position absolute
+      position relative
       z-index 5
       padding 5% 0
       left 0
@@ -134,13 +134,22 @@
     bottom 0
     left 0
     right 0
-    background-image imageUrl('location-details/users.png')
-    background-repeat no-repeat
-    background-position 10% 4em
-    background-size 40%
 
     h4
       font-size 1.25em
       letter-spacing 1px
       text-transform uppercase
       margin 1em 0 0.5em
+
+  &__users
+    background-position left center
+    background-image imageUrl('location-details/users.png')
+    background-repeat no-repeat
+    background-size contain
+    width 80%
+    padding-bottom 15%
+    margin 0 auto 5%
+
+.hidden-submit
+  visibility hidden
+  position absolute
