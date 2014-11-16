@@ -45,10 +45,14 @@
   animation-iteration-count 1
   -webkit-animation-fill-mode forwards
   animation-fill-mode forwards
+  backface-visibility hidden
+  -webkit-transform-style preserve-3d
+  transform-style preserve-3d
 
 
 .dark-half
   left 0
+  backface-visibility hidden
   z-index 1
   height 100%
   position absolute
@@ -59,6 +63,10 @@
   -webkit-animation moveUp 4s ease-in
   -webkit-animation-iteration-count 1
   animation-iteration-count 1
+  -webkit-animation-fill-mode forwards
+  animation-fill-mode forwards
+  -webkit-transform-style preserve-3d
+  transform-style preserve-3d
 
 .splash-wrapper
   background url('../images/logo/logo.png') no-repeat center center fixed
