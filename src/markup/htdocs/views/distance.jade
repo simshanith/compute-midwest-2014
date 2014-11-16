@@ -14,8 +14,10 @@
       map-type-id="TERRAIN").squireMap
     .map-copy
       h1 Starting From
-      h5 Overland Park
-      a(href="#") Change
+      h5 {{locationName}}
+      a(ng-click="showInput()") Change
+      form(ng-submit="getLocationFromZipCode()")
+        input(ng-show="zipReady", ng-model="zipCode", type="text", placeholder="Zip Code")
   .slider-pod
     h1 How Far Would You Like Travel
     .slider(distance='')

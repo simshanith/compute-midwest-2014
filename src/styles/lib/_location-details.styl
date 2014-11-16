@@ -1,19 +1,31 @@
 @require _globals
 
+
+.ui-view-location-details
+  &.ng-enter, &.ng-enter-active
+    .location-details
+      &__header
+        bottom 0%
+
+      &__footer
+        transform translateY(100%)
+
+
 .location-details
   position: absolute
   top 0
   left 0
   bottom 0
   right 0
+  text-align center
 
-  &__wrapper
+  &__header
     position absolute
     top 0
     left 0
     right 0
-    bottom 0
-    text-align center
+    bottom 50%
+    padding-bottom 1em
     font-size 3.2em
     font-weight 500
     line-height 1.2
@@ -21,6 +33,7 @@
     background-size cover
     background-position center
     color white
+    transition all 2s
 
     h3
       font-size 1.17em
@@ -29,7 +42,7 @@
     &:before
       display inline-block
       content ''
-      vertical-align middle
+      vertical-align bottom
       height 100%
 
   &__content
@@ -61,3 +74,58 @@
     right 0
     bottom 0
     background-image radial-gradient(at center, rgba(0,0,0,0.33), rgba(0,0,0,0) 150%)
+
+  &__footer
+    position absolute
+    top 50%
+    bottom 0
+    left 0
+    right 0
+    background-color cLightTan
+    transition transform 2s
+    transform translateY(0%)
+    user-select none
+
+    .pure-button
+      position absolute
+      z-index 5
+      padding 5% 0
+      left 0
+      bottom 0
+      width 100%
+      margin 0
+      background cBlack
+      color white
+      text-transform uppercase
+
+  &__actions
+    width 60%
+    margin 2% auto
+    padding-bottom 12%
+    background transparent imageUrl('location-details/actions.png') center no-repeat
+    background-size contain
+
+  &__blurb
+    padding 0 10%
+    font-size 1.5em
+    font-weight 400
+    max-height 30%
+    overflow auto
+
+  &__checkin
+    background-color cBeige
+    position absolute
+    top 50%
+    bottom 0
+    left 0
+    right 0
+    background-image imageUrl('location-details/users.png')
+    background-repeat no-repeat
+    background-position 10% 4em
+    background-size 40%
+
+    h4
+      font-size 1.25em
+      letter-spacing 1px
+      text-transform uppercase
+      margin 1em 0 0.5em

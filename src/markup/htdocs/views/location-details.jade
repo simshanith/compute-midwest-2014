@@ -1,7 +1,14 @@
-.location-details(ui-sref="victory")
-  .location-details__wrapper(ng-if="location", style="background-color: {{location.color}}; background-image: url({{location.image}});")
+.location-details
+  .location-details__header(ng-if="location", style="background-color: {{location.color}}; background-image: url({{location.image}});")
     .location-details__mask
     .location-details__content
-      h3 {{location.name}}!
+      h3 {{location.name}}
       .location-details__stats
         span.location-details__peeps {{location.peeps}}
+  .location-details__footer
+    .location-details__actions
+    .location-details__blurb
+      | The Champagne bar features 32 sparkling wines, 10 of which are from the Champagne region of France, as well as a full bar with spirits, Boulevard bottles and two beers on tap.
+    .location-details__checkin
+      h4 Who is with you?
+      button.pure-button(ui-sref="victory") Check-In
