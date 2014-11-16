@@ -1,4 +1,4 @@
-define(['./module'], function() {
+define(['./module'], function(directives) {
   directives.directive('canvasPop', [function() {
 
     function random(min, max) {
