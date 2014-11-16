@@ -1,5 +1,10 @@
 @require _globals
 
+.splash-container
+  width 100%
+  height 100%
+  background #e4e0cf
+
 .splash
   //display none
   opacity 0
@@ -49,6 +54,53 @@
   -webkit-transform-style preserve-3d
   transform-style preserve-3d
 
+.row1
+  animation moveLeft 2s ease-in
+  -moz-animation moveLeft 2s ease-in
+  -webkit-animation moveLeft 2s ease-in
+  -webkit-animation-iteration-count 1
+  animation-iteration-count 1
+  -webkit-animation-fill-mode forwards
+  animation-fill-mode forwards
+  backface-visibility hidden
+  -webkit-transform-style preserve-3d
+  transform-style preserve-3d
+
+.row
+  animation moveRight 2s ease-in
+  -moz-animation moveRight 2s ease-in
+  -webkit-animation moveRight 2s ease-in
+  -webkit-animation-iteration-count 1
+  animation-iteration-count 1
+  -webkit-animation-fill-mode forwards
+  animation-fill-mode forwards
+  backface-visibility hidden
+  -webkit-transform-style preserve-3d
+  transform-style preserve-3d
+
+.icon:nth-child(odd)
+  animation mDown 2s ease-in
+  -moz-animation mDown 2s ease-in
+  -webkit-animation mDown 2s ease-in
+  -webkit-animation-iteration-count 1
+  animation-iteration-count 1
+  -webkit-animation-fill-mode forwards
+  animation-fill-mode forwards
+  backface-visibility hidden
+  -webkit-transform-style preserve-3d
+  transform-style preserve-3d
+
+.icon:nth-child(even)
+  animation mUp 2s ease-in
+  -moz-animation mUp 2s ease-in
+  -webkit-animation mUp 2s ease-in
+  -webkit-animation-iteration-count 1
+  animation-iteration-count 1
+  -webkit-animation-fill-mode forwards
+  animation-fill-mode forwards
+  backface-visibility hidden
+  -webkit-transform-style preserve-3d
+  transform-style preserve-3d
 
 .dark-half
   left 0
@@ -85,8 +137,33 @@
 .icon-mania
   width 80%
   margin 0 auto
+  padding-top 2.5%
   .icon
-    padding 0 5% 5%
+    padding 5% 5% 5%
+
+.welcome
+  position absolute
+  width 96%
+  left 50%
+  margin-left -48%
+  background #fff
+  text-align center
+  top 26%
+  padding 10% 0
+  z-index 20
+  opacity 0
+  -webkit-animation fadeIn 3s
+  -webkit-animation-iteration-count 1
+  animation-iteration-count 1
+  -webkit-animation-fill-mode forwards
+  animation-fill-mode forwards
+
+@keyframes fadeIn {
+  0%{opacity: 0;}
+  50%{opacity: 0;}
+  75%{opacity: 0;}
+  100%{opacity: 1;}
+}
 
 // Splash Animation
 @keyframes splashAnimation {
@@ -99,6 +176,41 @@
 }
 
 
+@keyframes moveLeft {
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveright {
+  from{
+    -webkit-transform: translateX(100);
+  }
+  to{
+    -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes mUp {
+  from{
+    -webkit-transform: translateY(-100%);
+  }
+  to{
+    -webkit-transform: translateY(0%);
+  }
+}
+
+@keyframes mDown {
+  from{
+    -webkit-transform: translateY(100%);
+  }
+  to{
+    -webkit-transform: translateY(0%);
+  }
+}
 
 @keyframes moveUp {
    from {
@@ -153,3 +265,14 @@
       -webkit-transform: translateY(50%);
    }
 }
+
+.pure-button
+  position fixed
+  z-index 5
+  padding 5% 0
+  left 0
+  bottom 0
+  width 100%
+  margin 0
+  background #000
+  color #fff

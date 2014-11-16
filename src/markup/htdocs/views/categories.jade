@@ -1,8 +1,9 @@
 .categories
-  accordion(close-others=true)
-    accordion-group(is-open="isOpen")
-      accordion-heading
-        | Whoa
-        i.pull-right.glyphicon(ng-class="{'glyphicon-chevron-down': isOpen, 'glyphicon-chevron-right': !isOpen}")
-      a(ui-sref="categories-details")
-        | Content
+  img.pure-img(src="/assets/images/category-background.jpg",ui-sref="categories-details")
+  //- accordion(close-others=true)
+  //-   accordion-group(is-open="isOpen")
+  //-     accordion-heading
+  //-       | Whoa
+  //-       i.pull-right.glyphicon(ng-class="{'glyphicon-chevron-down': isOpen, 'glyphicon-chevron-right': !isOpen}")
+  //-     a(ui-sref="categories-details")
+  //-       | Content
