@@ -30,6 +30,7 @@
     'jquery.mousewheel': 'vendor/jquery.mousewheel.min',
     'imagesloaded': 'vendor/imagesloaded.pkgd.min',
     'hammer': 'vendor/hammer.min',
+    verge: 'vendor/verge.min',
     'ngmap': 'vendor/ng-map.min'
   };
 
@@ -51,8 +52,8 @@
       'jquery.mousewheel': 'vendor/jquery.mousewheel',
       'imagesloaded': 'vendor/imagesloaded.pkgd',
       'hammer': 'vendor/hammer',
+      verge: 'vendor/verge',
       'ngmap': 'vendor/ng-map'
-
     };
   }
 
@@ -98,6 +99,9 @@
     'imagesloaded': {
       deps: ['jquery'],
       exports: 'imagesLoaded'
+    },
+    verge: {
+      exports: 'verge'
     },
     ngmap: {
       deps: ['angular'],

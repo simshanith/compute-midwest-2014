@@ -1,0 +1,45 @@
+@require _globals
+
+.decision
+  position absolute
+  top 0
+  left 0
+  right 0
+  bottom 0
+
+
+
+  &__option
+    position absolute
+    left 0
+    right 0
+    height 50%
+    text-align center
+    font-size 10em
+    cursor ns-resize
+    user-select none
+
+    &--dragging
+      z-index 3
+
+    &--chosen
+      z-index 3
+      cursor auto
+
+    &:before
+      display inline-block
+      vertical-align middle
+      height 100%
+      content ''
+
+    &:first-child
+      top 0
+      background-color aqua
+
+    &:last-child
+      top 50%
+      background-color orangered
+
+  &__content
+    display inline-block
+    vertical-align middle
