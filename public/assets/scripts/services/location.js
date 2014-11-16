@@ -8,12 +8,14 @@ define(['./module', 'underscore'], function (services, _) {
       {
         name: 'Beer Kitchen',
         color: 'aqua',
-        id: 'a'
+        id: 'a',
+        image: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='
       },
       {
         name: 'Ça Va',
         color: 'orangered',
-        id: 'b'
+        id: 'b',
+        image: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='
       },
       {
         name: 'Port Fonda',
