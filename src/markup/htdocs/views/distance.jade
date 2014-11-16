@@ -1,6 +1,7 @@
 .where-from
   .map-container(ng-controller='mapcontroller')
-    map(zoom="16" center="[39.0954135, -94.577938]" 
+    // center="[39.0954135, -94.577938]"
+    map(zoom="16" 
       disable-default-u-i="true"
       disable-double-click-zoom="true"
       draggable="false"
@@ -11,8 +12,11 @@
       min-zoom="8"
       tilt="90"
       map-type-id="TERRAIN").squireMap
+    .map-copy
+      h2 Starting From
+      h1 Overland Park
+      a(href="#") Change
   
-  h1.derp HEY YALL
   h1 How Far Would You Like Travel
   .slider(distance='')
     input.rangeinput.bar(type='range', name='sliderBar',min='0',max='100')
