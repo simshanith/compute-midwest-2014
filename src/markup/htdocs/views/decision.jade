@@ -1,10 +1,16 @@
+include ../../helpers/node-mixins
+
 .decision(decider='')
   ul.decision__options
     li.decision__option(ng-repeat="location in locations", repeat-done="bindHammer()", style="background-color: {{location.color}}; background-image: url({{location.image}});")
       a(ui-sref="location-details").decision__select
       .decision__mask
       .decision__overlay(ng-class='dragging')
-      .decision__content {{location.name}}
+      .decision__content
+        h3 {{location.name}}
+        .decision__stats
+          span.decision__peeps {{location.peeps}}
 
   .decision__overview(ng-class='dragging')
-    | Grab a drink at...
+    +projectImage('icons/wine-glass.png')
+    span.cta Grab a drink at...
