@@ -1,2 +1,4 @@
 .location-details(ui-sref="victory")
-  h1 here on location details
+  .location-details__wrapper(ng-if="location", style="background-color: {{location.color}}")
+    .location-details__content
+      | {{location.name}}!

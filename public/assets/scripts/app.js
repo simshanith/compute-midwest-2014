@@ -15,6 +15,7 @@ define([
   'use strict';
 
   var ngApp = app.ngApp = ng.module('app', [
+    'app.services',
     'app.controllers',
     'app.directives',
     'ui.router',
@@ -61,11 +62,13 @@ define([
 
       $stateProvider.state('decision', {
         url: '/decision',
+        controller: 'DecisionCtrl',
         templateUrl: '/views/decision.html'
       });
 
       $stateProvider.state('location-details', {
-        url: '/location-details',
+        //url: '/location-details',
+        controller: 'LocationDetailsCtrl',
         templateUrl: '/views/location-details.html'
       });
 
