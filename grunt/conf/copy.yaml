@@ -174,4 +174,8 @@ bower:
       cwd: bower_components/verge/
       src: ["verge*.js"]
       dest: <%= copy.bower.options.scriptsDir %>/
-
+    -
+      expand: true
+      cwd: bower_components/ngmap/build/scripts/
+      src: ['ng-map*.js']
+      dest: <%= copy.bower.options.scriptsDir %>/

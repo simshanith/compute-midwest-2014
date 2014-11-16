@@ -30,7 +30,8 @@
     'jquery.mousewheel': 'vendor/jquery.mousewheel.min',
     'imagesloaded': 'vendor/imagesloaded.pkgd.min',
     'hammer': 'vendor/hammer.min',
-    verge: 'vendor/verge.min'
+    verge: 'vendor/verge.min',
+    'ngmap': 'vendor/ng-map.min'
   };
 
   if ( app.builds.isDev ) {
@@ -51,7 +52,8 @@
       'jquery.mousewheel': 'vendor/jquery.mousewheel',
       'imagesloaded': 'vendor/imagesloaded.pkgd',
       'hammer': 'vendor/hammer',
-      verge: 'vendor/verge'
+      verge: 'vendor/verge',
+      'ngmap': 'vendor/ng-map'
     };
   }
 
@@ -100,6 +102,10 @@
     },
     verge: {
       exports: 'verge'
+    },
+    ngmap: {
+      deps: ['angular'],
+      exports: 'angular'
     }
 
   };
