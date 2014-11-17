@@ -35,6 +35,9 @@ options:
     console-polyfill: "vendor/console-polyfill"
     hammer: 'vendor/hammer.min'
     verge: 'vendor/verge.min'
+    propertyParser: 'vendor/requirejs-plugins/propertyParser'
+    async: 'vendor/requirejs-plugins/async'
+    font: 'vendor/requirejs-plugins/font'
   enforceDefine: true
   name: main
   baseUrl: "<%= paths.build %>/scripts/"
@@ -96,7 +99,6 @@ options:
       exports: jQuery
     verge:
       exports: verge
-
 main:
   options:
     include: ['vendor/require']

@@ -179,3 +179,8 @@ bower:
       cwd: bower_components/ngmap/build/scripts/
       src: ['ng-map*.js']
       dest: <%= copy.bower.options.scriptsDir %>/
+    -
+      expand: true
+      cwd: bower_components/requirejs-plugins/src/
+      src: ["*.js"]
+      dest: <%= copy.bower.options.scriptsDir %>/requirejs-plugins/

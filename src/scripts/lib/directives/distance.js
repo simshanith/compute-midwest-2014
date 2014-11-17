@@ -6,11 +6,11 @@ define(['./module'],
       return {
         restrict: 'A',
         link: function (scope, $ele, attrs) {
-           console.log('here');
+           //console.log('here');
            var el, newPoint, newPlace, offset;
            
            // Select all range inputs, watch for change
-           $("input[type='range']").change(function() {
+           $ele.find("input[type='range']").change(function() {
              // Cache this for efficiency
              el = $(this);
 

@@ -1,5 +1,6 @@
 define([
   'base',
+  'require',
   'underscore',
   'jquery',
   'angular',
@@ -10,8 +11,9 @@ define([
   'angular-ui-router',
   'angular-ui-bootstrap',
   'angular-animate',
-  'ngmap'
-  ], function(app, _, $, ng, imagesLoaded, controllers, directives, services) {
+  'ngmap',
+  'async'
+  ], function(app, require, _, $, ng, imagesLoaded, controllers, directives, services) {
   'use strict';
 
   var ngApp = app.ngApp = ng.module('app', [
@@ -47,7 +49,17 @@ define([
 
       $stateProvider.state('distance', {
         url: '/distance',
-        templateUrl: '/views/distance.html'
+        templateUrl: '/views/distance.html',
+        resolve: {
+          googlemaps: ['$q', function($q){
+            return $q(function(resolve, reject) {
+              require(['async!//maps.google.com/maps/api/js?noext'], function() {
+                console.log('yep maps is definitely loaded');
+                resolve();
+              });
+            });
+          }]
+        }
       });
 
       $stateProvider.state('categories', {

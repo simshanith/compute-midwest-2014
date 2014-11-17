@@ -31,7 +31,10 @@
     'imagesloaded': 'vendor/imagesloaded.pkgd.min',
     'hammer': 'vendor/hammer.min',
     verge: 'vendor/verge.min',
-    'ngmap': 'vendor/ng-map.min'
+    'ngmap': 'vendor/ng-map.min',
+    'propertyParser': 'vendor/requirejs-plugins/propertyParser',
+    'async': 'vendor/requirejs-plugins/async',
+    'font': 'vendor/requirejs-plugins/font'
   };
 
   if ( app.builds.isDev ) {
@@ -53,7 +56,10 @@
       'imagesloaded': 'vendor/imagesloaded.pkgd',
       'hammer': 'vendor/hammer',
       verge: 'vendor/verge',
-      'ngmap': 'vendor/ng-map'
+      'ngmap': 'vendor/ng-map',
+      'propertyParser': 'vendor/requirejs-plugins/propertyParser',
+      'async': 'vendor/requirejs-plugins/async',
+      'font': 'vendor/requirejs-plugins/font'
     };
   }
 
@@ -138,9 +144,11 @@
   }
 
 
-  define(['app'], function(app) {
+  define(['app', 'require'], function(app, require) {
     console.log('App Loaded: ', app);
-    console.log('Scripts loaded.');
-
+    //console.log('Scripts loaded.');
+    require(['async!//maps.google.com/maps/api/js?noext'], function() {
+      console.log('loaded google maps');
+    });
   });
 })(this);

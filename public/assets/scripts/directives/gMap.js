@@ -8,6 +8,7 @@ define(['./module'],
           console.log('test gmap');
 
           scope.$on('mapInitialized', function(event, map) {
+            var google = window.google;
             console.log('map mapInitialized');
             var center;
           // calculate the center with getCenter
