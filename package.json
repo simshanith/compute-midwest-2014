@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "node web.js",
-    "postinstall": "bower install"
+    "postinstall": "grunt setup"
   },
   "dependencies": {
     "compression": "^1.2.0",
