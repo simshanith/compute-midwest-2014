@@ -11,8 +11,7 @@
     "node": "0.10.x"
   },
   "scripts": {
-    "start": "node web.js",
-    "postinstall": "grunt setup"
+    "start": "node web.js"
   },
   "dependencies": {
     "compression": "^1.2.0",
