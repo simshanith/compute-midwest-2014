@@ -9,7 +9,7 @@ define([
   'directives',
   'services',
   'angular-ui-router',
-  'angular-ui-bootstrap',
+  //'angular-ui-bootstrap',
   'angular-animate',
   'ngmap',
   'async'
@@ -21,7 +21,7 @@ define([
     'app.controllers',
     'app.directives',
     'ui.router',
-    'ui.bootstrap',
+    //'ui.bootstrap',
     'ngAnimate',
     'ngMap'
   ]);
