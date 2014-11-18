@@ -8,6 +8,10 @@ mixin includeJSON(file)
   script(type="application/json")&attributes(attributes)
     != includeJSON(file)
 
+mixin includeStyle(file)
+  style
+    != grunt.file.read(path.join(paths.assets.styles, file+'.css'))
+
 mixin ngTemplate(template)
   script(type="text/ng-template", id!=template+'.html')
     !=render(path.join(paths.htdocs, template+'.jade'))
