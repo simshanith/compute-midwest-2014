@@ -1,9 +1,9 @@
 {
   "name": "urban-squire",
   "private": true,
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/simshanith/compute-midwest-2014.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simshanith/compute-midwest-2014.git"
   },
   "homepage": "https://github.com/simshanith/compute-midwest-2014",
   "version": "0.0.0",
@@ -20,13 +20,12 @@
     "serve-static": "^1.7.1"
   },
   "devDependencies": {
-    "autoprefixer": "^3.1.0",
+    "autoprefixer": "^4.0.0",
     "csso-stylus": "0.0.3",
     "grunt": "~0.4.5",
     "grunt-browser-sync": "^1.5.3",
     "grunt-concurrent": "~1.0.0",
     "grunt-contrib-clean": "~0.6.0",
-    "grunt-contrib-connect": "~0.8.0",
     "grunt-contrib-copy": "~0.7.0",
     "grunt-contrib-jade": "~0.13.0",
     "grunt-contrib-jshint": "~0.10.0",
@@ -35,13 +34,13 @@
     "grunt-contrib-symlink": "~0.3.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-diff-copy": "^0.1.4",
-    "grunt-notify": "^0.3.1",
+    "grunt-notify": "^0.4.1",
     "jshint-stylish": "^1.0.0",
-    "kouto-swiss": "^0.10.3",
+    "kouto-swiss": "^0.11.3",
     "load-grunt-config": "~0.16.0",
     "lodash": "~2.4.1",
     "marked": "~0.3.2",
     "time-grunt": "~1.0.0",
-    "underscore.string": "~2.3.3"
+    "underscore.string": "^2.4.0"
   }
 }
