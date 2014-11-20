@@ -2,6 +2,12 @@
 //@import nib
 @import "kouto-swiss"
 
+ks-display-override(value, args...)
+  prop = unquote("display")
+  {prop} value args
+
+display = ks-display-override
+
 hashLookup(obj, key)
   obj[key]
 

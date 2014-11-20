@@ -32,7 +32,7 @@ define([
     function ($stateProvider, $urlRouterProvider) {
       $urlRouterProvider.otherwise("/");
 
-      $stateProvider.state('landing', {
+      $stateProvider.state('splash', {
         url: '/',
         templateUrl: '/views/splash.html'
       });
@@ -40,11 +40,6 @@ define([
       $stateProvider.state('map', {
         url: '/map',
         templateUrl: '/views/map.html'
-      });
-
-      $stateProvider.state('splash', {
-        url: '/splash',
-        templateUrl: '/views/splash.html'
       });
 
       $stateProvider.state('distance', {

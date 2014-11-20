@@ -14,4 +14,4 @@ mixin includeStyle(file)
 
 mixin ngTemplate(template)
   script(type="text/ng-template", id!=template+'.html')
-    !=render(path.join(paths.htdocs, template+'.jade'))
+    !=render(path.join('htdocs', template+'.jade'))

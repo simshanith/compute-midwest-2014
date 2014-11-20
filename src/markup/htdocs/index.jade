@@ -7,3 +7,8 @@ block mainContent
       .pure-1.splash-wrapper
     .light-half
   section.mainContent(ui-view, ng-cloak='', ng-class='className', scroller)
+
+prepend endScripts
+  - var views = ['splash', 'map', 'distance', 'categories', 'categories-details', 'decision', 'location-details', 'victory', 'adventure-finish']
+  - each view in views
+    +ngTemplate('/views/'+view)

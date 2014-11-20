@@ -1,6 +1,5 @@
-//-
-  // moving to footer
-  script(src='//maps.google.com/maps/api/js')
+//- Typekit
+
 //-
   // sync method
   script(src='//use.typekit.net/tdl2szs.js')
@@ -10,22 +9,28 @@
 //-
   // async method
   // http://blog.typekit.com/2011/05/25/loading-typekit-fonts-asynchronously/
-script.
-  (function() {
-    var config = {
-      kitId: 'tdl2szs'
-    };
-    var d = false;
-    var tk = document.createElement('script');
-    tk.src = '//use.typekit.net/' + config.kitId + '.js';
-    tk.type = 'text/javascript';
-    tk.async = 'true';
-    tk.onload = tk.onreadystatechange = function() {
-      var rs = this.readyState;
-      if (d || rs && rs != 'complete' && rs != 'loaded') return;
-      d = true;
-      try { Typekit.load(config); } catch (e) {}
-    };
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(tk, s);
-  })();
+  // could also use requirejs but head is faster
+
+- if (build === 'dev')
+  script.
+      (function() {
+        var config = {
+          kitId: 'tdl2szs'
+        };
+        var d = false;
+        var tk = document.createElement('script');
+        tk.src = '//use.typekit.net/' + config.kitId + '.js';
+        tk.type = 'text/javascript';
+        tk.async = 'true';
+        tk.onload = tk.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (d || rs && rs != 'complete' && rs != 'loaded') return;
+          d = true;
+          try { Typekit.load(config); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(tk, s);
+      })();
+- else
+  script.
+    !function(){var a={kitId:"tdl2szs"},b=!1,c=document.createElement("script");c.src="//use.typekit.net/"+a.kitId+".js",c.type="text/javascript",c.async="true",c.onload=c.onreadystatechange=function(){var c=this.readyState;if(!(b||c&&"complete"!=c&&"loaded"!=c)){b=!0;try{Typekit.load(a)}catch(d){}}};var d=document.getElementsByTagName("script")[0];d.parentNode.insertBefore(c,d)}();
