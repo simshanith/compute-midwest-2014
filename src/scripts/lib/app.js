@@ -64,6 +64,7 @@ define([
 
       $stateProvider.state('categories-details', {
         url: '/categories-details',
+        controller: 'CategoriesDetailsCtrl',
         templateUrl: '/views/categories-details.html'
       });
 
