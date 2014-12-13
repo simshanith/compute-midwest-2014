@@ -124,6 +124,7 @@ ngMap.service('Attr2Options', ['$parse', 'NavigatorGeolocation', 'GeoCoder', fun
           if (centered) {
             object.map.setCenter(latLng);
           }
+          options.callback && options.callback.apply(object);
         },
         errorFunc
       );
@@ -836,9 +837,12 @@ ngMap.directive('infoWindow', ['Attr2Options', '$compile', '$timeout', function(
     if (options.position && 
       !(options.position instanceof google.maps.LatLng)) {
       var address = options.position;
-      options.position = new google.maps.LatLng(0,0);
+      delete options.position;
       infoWindow = new google.maps.InfoWindow(options);
-      parser.setDelayedGeoLocation(infoWindow, 'setPosition', address);
+      var callback = function() {
+        infoWindow.open(infoWindow.map);
+      }
+      parser.setDelayedGeoLocation(infoWindow, 'setPosition', address, {callback: callback});
     } else {
       infoWindow = new google.maps.InfoWindow(options);
     }
@@ -902,12 +906,13 @@ ngMap.directive('infoWindow', ['Attr2Options', '$compile', '$timeout', function(
 
       // show InfoWindow when initialized
       if (infoWindow.visible) {
-        if (!infoWindow.position) { throw "Invalid position"; }
+        //if (!infoWindow.position) { throw "Invalid position"; }
         scope.$on('mapInitialized', function(evt, map) {
           $timeout(function() {
             infoWindow.__template = infoWindow.__eval.apply(this, [evt]);
             infoWindow.__compile(scope);
-            infoWindow.open(map);
+            infoWindow.map = map;
+            infoWindow.position && infoWindow.open(map);
           });
         });
       }
@@ -1213,10 +1218,12 @@ ngMap.directive('map', ['Attr2Options', '$timeout', function(Attr2Options, $time
          */
         mapOptions.zoom = mapOptions.zoom || 15;
         var center = mapOptions.center;
-        if (!(center instanceof google.maps.LatLng)) {
+        if (!center) {
+          mapOptions.center = new google.maps.LatLng(0,0);
+        } else if (!(center instanceof google.maps.LatLng)) {
           delete mapOptions.center;
           Attr2Options.setDelayedGeoLocation(map, 'setCenter', 
-              center, options.geoFallbackCenter);
+              center, {fallbackLocation: options.geoFallbackCenter});
         }
         map.setOptions(mapOptions);
 
