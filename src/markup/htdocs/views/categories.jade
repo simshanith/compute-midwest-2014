@@ -1,8 +1,6 @@
-.categories(ui-sref="categories-details")
-  //- accordion(close-others=true)
-  //-   accordion-group(is-open="isOpen")
-  //-     accordion-heading
-  //-       | Whoa
-  //-       i.pull-right.glyphicon(ng-class="{'glyphicon-chevron-down': isOpen, 'glyphicon-chevron-right': !isOpen}")
-  //-     a(ui-sref="categories-details")
-  //-       | Content
+.categories
+  .category(ui-sref="categories-details", ng-repeat="category in categories", ng-click="onCategorySelected();")
+    //-.title {{category.title}}
+    //-.key {{category-key}}
+    img.background-image(ng-src="{{category.backgroundImage}}")
+  img.footer-image(src="/assets/images/categories/footer.jpg")
