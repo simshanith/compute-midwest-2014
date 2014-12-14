@@ -1,1 +1,1 @@
-<div ui-sref="categories-details" class="categories"></div>
+<div class="categories"><div ui-sref="categories-details" ng-repeat="category in categories" ng-click="onCategorySelected();" class="category"><img ng-src="{{category.backgroundImage}}" class="background-image"/></div><img src="/assets/images/categories/footer.jpg" class="footer-image"/></div>

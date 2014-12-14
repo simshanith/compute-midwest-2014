@@ -1,6 +1,7 @@
 define([
   './module',
-  './location'
+  './categories',
+  './location',
 ], function(services) {
   'use strict';
   return services;

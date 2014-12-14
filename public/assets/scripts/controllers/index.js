@@ -1,6 +1,7 @@
 define([
   './module',
   './location-details',
+  './categories',
   './categories-details',
   './decision',
   './map',
